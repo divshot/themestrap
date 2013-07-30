@@ -1,0 +1,12 @@
+{
+  "name": "Themestrap",
+  "version": "0.1.0",
+  "main": "dist/bootstrap.css",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
