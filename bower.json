@@ -1,5 +1,5 @@
 {
-  "name": "themestrap",
+  "name": "bootstrap-theme-themestrap",
   "version": "0.1.0",
   "main": "dist/bootstrap.css",
   "ignore": [
