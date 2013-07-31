@@ -1,5 +1,5 @@
 {
-  "name": "Themestrap",
+  "name": "themestrap",
   "version": "0.1.0",
   "main": "dist/bootstrap.css",
   "ignore": [
@@ -8,5 +8,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap":"3.0.0-rc1" 
+  }
 }

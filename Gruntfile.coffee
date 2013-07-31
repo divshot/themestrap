@@ -4,50 +4,37 @@ module.exports = (grunt) ->
       compile:
         options:
           compress: false
-          paths: ['bootstrap/less/*', 'lib/*']
+          paths: ['less', 'bower_components/bootstrap/less']
         files:
-          'dist/bootstrap.css': ['lib/bootstrap.less', 'lib/themestrap.less']
+          'dist/css/bootstrap.css': ['tmp/bootstrap.less', 'less/theme.less']
     watch:
       less:
-        files: ['lib/*.less']
-        tasks: ['less:compile']
+        files: ['less/*.less']
+        tasks: ['less:compile', 'clean']
         options:
           livereload: true
       cssmin:
-        files: ['dist/*.css', 'dist/!*.min.css']
+        files: ['dist/css/bootstrap.css']
         tasks: ['cssmin:minify']
     cssmin:
       minify:
         expand: true
         cwd: 'dist'
         src: ['*.css', '!*.min.css']
-        dest: 'dist'
+        dest: 'dist/css'
         ext: '.min.css'
     copy:
       bootstrap:
         files: [
-          { expand: true, cwd: 'bootstrap/less', src: ['bootstrap.less'], dest: 'lib/' }
+          { expand: true, cwd: 'bower_components/bootstrap/less', src: ['bootstrap.less'], dest: 'tmp/' }
         ]
-    replace:
-      bootstrap_src:
-        src: ['lib/bootstrap.less']
-        overwrite: true
-        replacements: [{
-          from: '@import "'
-          to: '@import "bootstrap/less/'
-        }]
-      bootstrap_variables:
-        src: ['lib/bootstrap.less']
-        overwrite: true
-        replacements: [{
-          from: '@import "bootstrap/less/variables.less"'
-          to: '@import "variables.less"'
-        }]
+    clean: ['tmp']
 
   grunt.loadNpmTasks('grunt-contrib-less')
   grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('grunt-contrib-cssmin')
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-text-replace')
+  grunt.loadNpmTasks('grunt-contrib-clean')
 
-  grunt.registerTask('default', ['copy', 'replace', 'less', 'cssmin'])
+  grunt.registerTask('default', ['copy', 'less', 'cssmin', 'clean'])
