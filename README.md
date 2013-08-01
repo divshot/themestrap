@@ -49,6 +49,18 @@ We've provided a "Bootstrap Kitchen Sink" HTML file at `examples/kitchen-sink.ht
 all of the various components in all of their variations. It may not be 100% exhaustive but it
 should give you a good idea of what your theme will look like at a glance.
 
+## Releasing Your Theme
+
+Before you release your theme, you should do a few things:
+
+1. Make sure that you've updated the package name in `bower.json`
+2. Update the `index.html` file with your theme name and GitHub repo info (or change it to suit your needs)
+3. Update the `examples/kitchen-sink.html` with your theme's name
+4. Update the `README.md` file to be about your theme
+
+Once you've done that, you should push it up to GitHub and consider 
+[registering a Bower package](https://github.com/bower/bower#registering-packages).
+
 ## License
 
 Copyright (c) 2013 Divshot, Inc.

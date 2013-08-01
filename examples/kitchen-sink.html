@@ -20,22 +20,47 @@
       <div class="container">
         <a href="#" class="navbar-brand">Themestrap</a>
         <ul class="nav navbar-nav">
-          <li>
-            <a href="#headings">Headings</a>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#headings">Headings</a></li>
+              <li><a href="#content-formatting">Content</a></li>
+              <li><a href="#tables">Tables</a></li>
+              <li><a href="#forms">Forms</a></li>
+              <li><a href="#images">Images</a></li>
+            </ul>
           </li>
-          <li>
-            <a href="#content-formatting">Content</a>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Components <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#dropdowns">Dropdowns</a></li>
+              <li><a href="#input-groups">Input Groups</a></li>
+              <li><a href="#navs">Navs</a></li>
+              <li><a href="#navbar">Navbar</a></li>
+              <li><a href="#pagination">Pagination</a></li>
+              <li><a href="#alerts">Alerts</a></li>
+              <li><a href="#labels">Labels</a></li>
+              <li><a href="#progress">Progress</a></li>
+              <li><a href="#media-object">Media Object</a></li>
+              <li><a href="#list-groups">List Groups</a></li>
+              <li><a href="#panels">Panels</a></li>
+              <li><a href="#wells">Wells</a></li>
+            </ul>
           </li>
-          <li>
-            <a href="#tables">Tables</a>
-          </li>
-          <li>
-            <a href="#forms">Forms</a>
-          </li>
-          <li>
-            <a href="#buttons">Buttons</a>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Source <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="../dist/css/bootstrap.css">bootstrap.css</a></li>
+              <li><a href="../dist/css/bootstrap.min.css">bootstrap.min.css</a></li>
+              <li class="divider"></li>
+              <li><a href="../less/variables.less">variables.less</a></li>
+              <li><a href="../less/theme.less">theme.less</a></li>
+            </ul>
           </li>
         </ul>
+        <p class="navbar-text pull-right">Themestrap by <a href="http://www.divshot.com/" target="_blank">Divshot</a></p>
+        <p class="navbar-text pull-right"><a href="https://twitter.com/share" class="twitter-share-button" data-via="divshot" data-hashtags="themestrap">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
       </div>
     </div>
     <div class="container">
@@ -46,7 +71,7 @@
       </div>
       <div class="row">
         <div class="col-lg-6">
-          <div class="panel panel-default">
+          <div class="panel panel-default" id="headings">
             <div class="panel-heading">Headings
             </div>
             <h1 class="page-header">Page Header <small>With Small Text</small></h1>
@@ -57,7 +82,7 @@
             <h5>This is an h5 heading</h5>
             <h6>This is an h6 heading</h6>
           </div>
-          <div class="panel panel-default">
+          <div class="panel panel-default" id="tables">
             <div class="panel-heading">Tables
             </div>
             <table class="table table-hover">
@@ -125,7 +150,7 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="panel panel-default">
+          <div class="panel panel-default" id="content-formatting">
             <div class="panel-heading">Content Formatting
             </div>
             <p class="lead">This is a lead paragraph.</p>
@@ -173,7 +198,7 @@
           </div>
         </div>
       </div>
-      <div class="panel panel-default">
+      <div class="panel panel-default" id="forms">
         <div class="panel-heading">Forms
         </div>
         <form>
@@ -250,7 +275,7 @@
       </div>
       <div class="row">
         <div class="col-lg-6">
-          <div class="panel panel-default">
+          <div class="panel panel-default" id="buttons">
             <div class="panel-heading">Buttons
             </div>
             <p><!-- Standard gray button with gradient -->
@@ -276,7 +301,7 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="panel panel-default">
+          <div class="panel panel-default" id="images">
             <div class="panel-heading">Images
             </div>
             <p><img src="http://placehold.it/120x100" class="img-rounded">
@@ -287,7 +312,7 @@
       </div>
       <div class="row">
         <div class="col-lg-3">
-          <div class="panel panel-default clearfix">
+          <div class="panel panel-default clearfix" id="dropdowns">
             <div class="panel-heading">Dropdowns
             </div>
             <p></p>
@@ -314,7 +339,7 @@
           </div>
         </div>
         <div class="col-lg-9">
-          <div class="panel panel-default">
+          <div class="panel panel-default" id="input-groups">
             <div class="panel-heading">Input Groups
             </div>
             <p></p>
@@ -339,7 +364,7 @@
       </div>
       <div class="row">
         <div class="col-lg-6">
-          <div class="panel panel-default">
+          <div class="panel panel-default" id="navs">
             <div class="panel-heading">Navs
             </div>
             <p></p>
@@ -374,7 +399,7 @@
             <p></p>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" id="navbar">
           <div class="panel panel-default">
             <div class="panel-heading">Navbar
             </div>
@@ -417,7 +442,7 @@
       </div>
       <div class="row">
         <div class="col-lg-6">
-          <div class="panel panel-default">
+          <div class="panel panel-default" id="pagination">
             <div class="panel-heading">Pagination
             </div>
             <ul class="pagination" style="margin-right: 10px;">
@@ -469,7 +494,7 @@
               </li>
             </ul>
           </div>
-          <div class="panel panel-default">
+          <div class="panel panel-default" id="labels">
             <div class="panel-heading">Labels and Badges
             </div>
             <h3><span class="label">Default</span><span class="label label-success">Success</span><span class="label label-warning">Warning</span><span class="label label-danger">Danger</span><span class="label label-info">Info</span></h3>
@@ -477,7 +502,7 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="panel panel-default">
+          <div class="panel panel-default" id="alerts">
             <div class="panel-heading">Alerts
             </div>
             <div>
@@ -508,7 +533,7 @@
       </div>
       <div class="row">
         <div class="col-lg-6">
-          <div class="panel panel-default">
+          <div class="panel panel-default" id="progress">
             <div class="panel-heading">Progress Bars
             </div>
             <div class="progress">
@@ -526,7 +551,7 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="panel panel-default">
+          <div class="panel panel-default" id="media-object">
             <div class="panel-heading">Media Object
             </div>
             <p></p>
@@ -547,7 +572,7 @@
           </div>
         </div>
       </div>
-      <div class="panel panel-default">
+      <div class="panel panel-default" id="list-groups">
         <div class="panel-heading">List Groups
         </div>
         <div class="row">
@@ -574,7 +599,7 @@
       </div>
       <div class="row">
         <div class="col-lg-3">
-          <div class="panel panel-primary">
+          <div class="panel panel-primary" id="panels">
             <div class="panel-heading">This is a header
             </div>
             <p>This is a panel</p>
@@ -635,7 +660,7 @@
           </div>
         </div>
         <div class="col-lg-3">
-          <div class="well">Default Well
+          <div class="well" id="wells">Default Well
           </div>
           <div class="well well-small">Small Well
           </div>
