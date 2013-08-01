@@ -6,17 +6,23 @@ possible.
 
 ## Themestrap's Philosophy
 
-Themes should be as lightweight as possible and do as much as possible to be maintainable as the
-framework evolves. To this end, Themestrap provides you with two simple files to modify: **variables.less**
-and **theme.less** (both in the `less` directory).
+1. A theme should be built *on top* of the framework, with as little intrusive change as possible.
+2. As the framework evolves, a theme should be easily updated to the latest version.
 
-You can tweak any and all of the Bootstrap variables in **variables.less** and support any additional code
-or classes you'd like in **theme.less**. The compiled theme CSS will be appended after the Bootstrap CSS.
+To this end, Themestrap provides you with two simple files to modify: **variables.less**
+and **theme.less** (both in the `less` directory). You can tweak any and all of the Bootstrap variables 
+in **variables.less** and support any additional code or classes you'd like in **theme.less**. The compiled
+theme CSS will be appended after the Bootstrap CSS.
 
 In cases where you need to do a more in-depth overhaul of a portion of Bootstrap's LESS, you may do so by
-simply creating a file of the same name in Themestrap's `less` directory. Because it takes priority over
-the Bower-installed Bootstrap LESS, it will automatically override the Bootstrap default. In fact, this
-is how `variables.less` works already...delete it and the default Bootstrap variables will be back in play.
+simply copying over a file from Bootstrap's `less` directory into your theme's `less` directory and then
+modifying it as necessary. Example:
+
+    cp bower_components/bootstrap/less/alerts.less less/alerts.less
+
+Because it takes priority over the Bower-installed Bootstrap LESS, it will automatically override the 
+Bootstrap default. In fact, this is how `variables.less` works already...delete it and the default Bootstrap
+variables will be back in play.
 
 ## Creating a Theme with Themestrap
 
@@ -37,9 +43,15 @@ Now you're ready to go! Simply edit `less/variables.less` and `less/theme.less` 
 When you're ready, just run `grunt` and it will compile and minify the distribution for you.
 You can also run `grunt watch` to automatically compile as you work.
 
+## Testing Out Your Theme
+
+We've provided a "Bootstrap Kitchen Sink" HTML file at `examples/kitchen-sink.html` that contains
+all of the various components in all of their variations. It may not be 100% exhaustive but it
+should give you a good idea of what your theme will look like at a glance.
+
 ## License
 
-Copyright (c) 2013 Divshot
+Copyright (c) 2013 Divshot, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

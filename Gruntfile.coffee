@@ -10,7 +10,7 @@ module.exports = (grunt) ->
     watch:
       less:
         files: ['less/*.less']
-        tasks: ['less:compile', 'clean']
+        tasks: ['copy', 'less:compile', 'clean']
         options:
           livereload: true
       cssmin:
