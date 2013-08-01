@@ -4,9 +4,9 @@ module.exports = (grunt) ->
       compile:
         options:
           compress: false
-          paths: ['less', 'bower_components/bootstrap/less']
+          paths: ['less', 'tmp', 'bower_components/bootstrap/less']
         files:
-          'dist/css/bootstrap.css': ['tmp/bootstrap.less', 'less/theme.less']
+          'dist/css/bootstrap.css': ['less/theme.less']
     watch:
       less:
         files: ['less/*.less']
