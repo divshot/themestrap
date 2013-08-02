@@ -64,6 +64,12 @@ Once you've done that, you should push it up to GitHub and consider
 is already designed to be released directly onto GitHub Pages without an additional intermediary,
 so if you push to the `gh-pages` branch you should have a nice way to show off your theme!
 
+## The Themestrap Gallery
+
+We've created a [gallery of themes built with Themestrap](http://code.divshot.com/themestrap). If you
+have created a theme and want to add it to the gallery, just make a pull request to the [gh-pages](https://github.com/divshot/themestrap/tree/gh-pages)
+branch of this repository.
+
 ## Copyright and license
 
 Copyright 2013 Divshot, Inc. under [the Apache 2.0 license](LICENSE).
