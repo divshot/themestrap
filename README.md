@@ -39,6 +39,8 @@ We've provided a "Bootstrap Kitchen Sink" HTML file at `examples/kitchen-sink.ht
 all of the various components in all of their variations. It may not be 100% exhaustive but it
 should give you a good idea of what your theme will look like at a glance.
 
+You can start a development server at `http://localhost:8000` by running `grunt serve`. Your theme will automatically compile while the server is running.
+
 ## Deeper Customization
 
 In cases where you need to do a more in-depth overhaul of a portion of Bootstrap's LESS, you may do so by

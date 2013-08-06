@@ -24,6 +24,10 @@ module.exports = (grunt) ->
         src: ['*.css', '!*.min.css']
         dest: 'dist/css'
         ext: '.min.css'
+    connect:
+      serve:
+        options:
+          port: 8000
     copy:
       bootstrap:
         files: [
@@ -37,5 +41,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-text-replace')
   grunt.loadNpmTasks('grunt-contrib-clean')
+  grunt.loadNpmTasks('grunt-contrib-connect')
 
   grunt.registerTask('default', ['copy', 'less', 'cssmin', 'clean'])
+  grunt.registerTask('serve', ['connect', 'watch'])
