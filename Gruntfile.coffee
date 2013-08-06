@@ -1,10 +1,11 @@
 module.exports = (grunt) ->
   grunt.initConfig
+    bowerDirectory: require('bower').config.directory
     less:
       compile:
         options:
           compress: false
-          paths: ['less', 'tmp', 'bower_components/bootstrap/less']
+          paths: ['less', 'tmp', '<%= bowerDirectory %>/bootstrap/less']
         files:
           'dist/css/bootstrap.css': ['less/theme.less']
     watch:
@@ -26,7 +27,7 @@ module.exports = (grunt) ->
     copy:
       bootstrap:
         files: [
-          { expand: true, cwd: 'bower_components/bootstrap/less', src: ['bootstrap.less'], dest: 'tmp/' }
+          { expand: true, cwd: '<%= bowerDirectory %>/bootstrap/less', src: ['bootstrap.less'], dest: 'tmp/' }
         ]
     clean: ['tmp']
 
