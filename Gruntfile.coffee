@@ -27,7 +27,8 @@ module.exports = (grunt) ->
     connect:
       serve:
         options:
-          port: 8000
+          port: grunt.option('port') || '8000'
+          hostname: grunt.option('host') || 'localhost'
     copy:
       bootstrap:
         files: [
