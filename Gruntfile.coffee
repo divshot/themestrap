@@ -20,14 +20,15 @@ module.exports = (grunt) ->
     cssmin:
       minify:
         expand: true
-        cwd: 'dist'
+        cwd: 'dist/css'
         src: ['*.css', '!*.min.css']
         dest: 'dist/css'
         ext: '.min.css'
     connect:
       serve:
         options:
-          port: 8000
+          port: grunt.option('port') || '8000'
+          hostname: grunt.option('host') || 'localhost'
     copy:
       bootstrap:
         files: [

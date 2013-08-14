@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-theme-themestrap",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "dist/bootstrap.css",
   "ignore": [
     "**/.*",
@@ -10,6 +10,6 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap":"3.0.0-rc1" 
+    "bootstrap":"3.0.0-rc.2" 
   }
 }
