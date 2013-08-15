@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="../dist/css/bootstrap.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>
     <style>
       body {
         padding-bottom: 60px;
@@ -18,49 +18,61 @@
   <body>
     <div class="navbar navbar-static-top">
       <div class="container">
-        <a href="#" class="navbar-brand">Themestrap</a>
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#headings">Headings</a></li>
-              <li><a href="#content-formatting">Content</a></li>
-              <li><a href="#tables">Tables</a></li>
-              <li><a href="#forms">Forms</a></li>
-              <li><a href="#images">Images</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Components <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#dropdowns">Dropdowns</a></li>
-              <li><a href="#input-groups">Input Groups</a></li>
-              <li><a href="#navs">Navs</a></li>
-              <li><a href="#navbar">Navbar</a></li>
-              <li><a href="#pagination">Pagination</a></li>
-              <li><a href="#alerts">Alerts</a></li>
-              <li><a href="#labels">Labels</a></li>
-              <li><a href="#progress">Progress</a></li>
-              <li><a href="#media-object">Media Object</a></li>
-              <li><a href="#list-groups">List Groups</a></li>
-              <li><a href="#panels">Panels</a></li>
-              <li><a href="#wells">Wells</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Source <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="../dist/css/bootstrap.css">bootstrap.css</a></li>
-              <li><a href="../dist/css/bootstrap.min.css">bootstrap.min.css</a></li>
-              <li class="divider"></li>
-              <li><a href="../less/variables.less">variables.less</a></li>
-              <li><a href="../less/theme.less">theme.less</a></li>
-            </ul>
-          </li>
-        </ul>
-        <p class="navbar-text pull-right">Themestrap by <a href="http://www.divshot.com/" target="_blank">Divshot</a></p>
-        <p class="navbar-text pull-right"><a href="https://twitter.com/share" class="twitter-share-button" data-via="divshot" data-hashtags="themestrap">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+        
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Themestrap</a>
+        </div>
+        
+        <div class="collapse navbar-collapse header-collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#headings">Headings</a></li>
+                <li><a href="#content-formatting">Content</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#images">Images</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Components <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#dropdowns">Dropdowns</a></li>
+                <li><a href="#input-groups">Input Groups</a></li>
+                <li><a href="#navs">Navs</a></li>
+                <li><a href="#navbar">Navbar</a></li>
+                <li><a href="#pagination">Pagination</a></li>
+                <li><a href="#alerts">Alerts</a></li>
+                <li><a href="#labels">Labels</a></li>
+                <li><a href="#progress">Progress</a></li>
+                <li><a href="#media-object">Media Object</a></li>
+                <li><a href="#list-groups">List Groups</a></li>
+                <li><a href="#panels">Panels</a></li>
+                <li><a href="#wells">Wells</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Source <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="../dist/css/bootstrap.css">bootstrap.css</a></li>
+                <li><a href="../dist/css/bootstrap.min.css">bootstrap.min.css</a></li>
+                <li class="divider"></li>
+                <li><a href="../less/variables.less">variables.less</a></li>
+                <li><a href="../less/theme.less">theme.less</a></li>
+              </ul>
+            </li>
+          </ul>
+          <p class="navbar-text navbar-right">Themestrap by <a href="http://www.divshot.com/" target="_blank">Divshot</a></p>
+          <p class="navbar-text navbar-right"><a href="https://twitter.com/share" class="twitter-share-button" data-via="divshot" data-hashtags="themestrap">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+        </div>
       </div>
     </div>
     <div class="container">
@@ -72,8 +84,8 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="panel panel-default" id="headings">
-            <div class="panel-heading">Headings
-            </div>
+            <div class="panel-heading">Headings</div>
+            <div class="panel-body">
             <h1 class="page-header">Page Header <small>With Small Text</small></h1>
             <h1>This is an h1 heading</h1>
             <h2>This is an h2 heading</h2>
@@ -81,10 +93,12 @@
             <h4>This is an h4 heading</h4>
             <h5>This is an h5 heading</h5>
             <h6>This is an h6 heading</h6>
+            </div>
           </div>
           <div class="panel panel-default" id="tables">
             <div class="panel-heading">Tables
             </div>
+            <div class="panel-body">
             <table class="table table-hover">
               <thead>
                 <tr>
@@ -147,12 +161,14 @@
                 </tr>
               </tbody>
             </table>
+            </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="panel panel-default" id="content-formatting">
             <div class="panel-heading">Content Formatting
             </div>
+            <div class="panel-body">
             <p class="lead">This is a lead paragraph.</p>
             <p>This is an <b>ordinary paragraph</b> that is <i>long enough</i> to wrap to <u>multiple lines</u> so that you can see how the line spacing looks.</p>
             <p class="text-muted">Muted color paragraph.</p>
@@ -162,15 +178,13 @@
             <p class="text-success">Success color paragraph.</p>
             <p><small>This is text in a <code>small</code> wrapper. <abbr title="No Big Deal">NBD</abbr>, right?</small></p>
             <hr>
-            <div class="row">
-              <address class="col-6">                <strong>Twitter, Inc.</strong><br>                795 Folsom Ave, Suite 600<br>                San Francisco, CA 94107<br>                <abbr title="Phone">P:</abbr> (123) 456-7890              </address><address class="col-6">                <strong>Full Name</strong><br>                <a href="mailto:#">first.last@example.com</a>              </address>
-            </div>
+            <address>                <strong>Twitter, Inc.</strong><br>                795 Folsom Ave, Suite 600<br>                San Francisco, CA 94107<br>                <abbr title="Phone">P:</abbr> (123) 456-7890              </address><address class="col-6">                <strong>Full Name</strong><br>                <a href="mailto:#">first.last@example.com</a>              </address>
             <hr>
             <blockquote>Here's what a blockquote looks like in Bootstrap. <small>Use <code>small</code> to identify the source.</small>
             </blockquote>
             <hr>
             <div class="row">
-              <div class="col-6">
+              <div class="col-xs-6">
                 <ul>
                   <li>Normal Unordered List</li>
                   <li>Can Also Work
@@ -181,7 +195,7 @@
                   <li>Adds Bullets to Page</li>
                 </ul>
               </div>
-              <div class="col-6">
+              <div class="col-xs-6">
                 <ol>
                   <li>Normal Ordered List</li>
                   <li>Can Also Work
@@ -195,12 +209,14 @@
             </div>
             <hr>
             <pre>function preFormatting() {  // looks like this;  var something = somethingElse;  return true;}</pre>
+            </div>
           </div>
         </div>
       </div>
       <div class="panel panel-default" id="forms">
         <div class="panel-heading">Forms
         </div>
+        <div class="panel-body">
         <form>
           <fieldset>
             <legend>Legend</legend>
@@ -272,12 +288,14 @@
             </div>
           </div>
         </form>
+        </div>
       </div>
       <div class="row">
         <div class="col-lg-6">
           <div class="panel panel-default" id="buttons">
             <div class="panel-heading">Buttons
             </div>
+            <div class="panel-body">
             <p><!-- Standard gray button with gradient -->
               <button type="button" class="btn btn-default">Default</button>
               <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
@@ -293,29 +311,32 @@
               <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
               <button type="button" class="btn btn-link">Link</button></p>
             <p>
-              <button type="button" class="btn btn-primary btn-large">Large button</button>
+              <button type="button" class="btn btn-primary btn-lg">Large</button>
               <button type="button" class="btn btn-primary disabled">Disabled</button>
-              <button type="button" class="btn btn-primary">Default button</button>
-              <button type="button" class="btn btn-primary btn-small">Small button</button>
-              <button type="button" class="btn btn-primary btn-mini">Mini button</button></p>
+              <button type="button" class="btn btn-primary">Default</button>
+              <button type="button" class="btn btn-primary btn-sm">Small</button>
+              <button type="button" class="btn btn-primary btn-xs">Extra Small</button></p>
+          </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="panel panel-default" id="images">
             <div class="panel-heading">Images
             </div>
+            <div class="panel-body">
             <p><img src="http://placehold.it/120x100" class="img-rounded">
               <img src="http://placehold.it/120x100" class="img-circle">
               <img src="http://placehold.it/120x100" class="img-thumbnail"></p>
+            </div>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-3">
-          <div class="panel panel-default clearfix" id="dropdowns">
+          <div class="panel panel-default" id="dropdowns">
             <div class="panel-heading">Dropdowns
             </div>
-            <p></p>
+            <div class="panel-body clearfix">
             <div class="dropdown">
               <!-- Link or button to toggle dropdown -->
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static;">
@@ -335,30 +356,26 @@
                 </li>
               </ul>
             </div>
-            <p></p>
+            </div>
           </div>
         </div>
         <div class="col-lg-9">
           <div class="panel panel-default" id="input-groups">
             <div class="panel-heading">Input Groups
             </div>
-            <p></p>
+            <div class="panel-body">
             <div class="input-group">
               <span class="input-group-btn">                <button class="btn btn-default" type="button">Go!</button>              </span><input type="text" class="form-control" placeholder="Username">
-            </div>
-            <p></p>
-            <p></p>
+            </div><br>
             <div class="input-group">
               <input type="text" class="form-control input-large">
               <span class="input-group-addon input-large">.00</span>
-            </div>
-            <p></p>
-            <p></p>
+            </div><br>
             <div class="input-group">
               <span class="input-group-addon">$</span><input type="text" class="form-control">
               <span class="input-group-addon">.00</span>
             </div>
-            <p></p>
+            </div>
           </div>
         </div>
       </div>
@@ -367,7 +384,7 @@
           <div class="panel panel-default" id="navs">
             <div class="panel-heading">Navs
             </div>
-            <p></p>
+            <div class="panel-body clearfix">
             <ul class="nav nav-tabs">
               <li class="active">
                 <a href="#">Home</a>
@@ -396,47 +413,58 @@
                 <a href="#">About</a>
               </li>
             </ul>
-            <p></p>
+            </div>
           </div>
         </div>
         <div class="col-lg-6" id="navbar">
           <div class="panel panel-default">
             <div class="panel-heading">Navbar
             </div>
+            <div class="panel-body">
             <p></p>
             <div class="navbar">
-              <a href="#" class="navbar-brand">Your Company</a>
-              <ul class="nav navbar-nav">
-                <li class="active">
-                  <a href="#">Home</a>
-                </li>
-                <li>
-                  <a href="#">About</a>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li>
-              </ul>
+              <div class="navbar-header">
+                <a href="#" class="navbar-brand">Your Company</a>
+              </div>
+              <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active">
+                    <a href="#">Home</a>
+                  </li>
+                  <li>
+                    <a href="#">About</a>
+                  </li>
+                  <li>
+                    <a href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="navbar navbar-inverse">
-              <a href="#" class="navbar-brand">Your Company</a>
-              <ul class="nav navbar-nav">
-                <li class="active">
-                  <a href="#">Home</a>
-                </li>
-                <li>
-                  <a href="#">About</a>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li>
-              </ul>
+              <div class="navbar-header">
+                <a href="#" class="navbar-brand">Your Company</a>
+              </div>
+              <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active">
+                    <a href="#">Home</a>
+                  </li>
+                  <li>
+                    <a href="#">About</a>
+                  </li>
+                  <li>
+                    <a href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="navbar">
-              <a class="btn btn-primary navbar-btn">Navbar Button</a>
-              <p class="navbar-text pull-right">Navbar Text</p>
+              <div class="collapse navbar-collapse">
+                <a class="btn btn-primary navbar-btn">Navbar Button</a>
+                <p class="navbar-text navbar-right">Navbar Text</p>
+              </div>
             </div>
-            <p></p>
+            </div>
           </div>
         </div>
       </div>
@@ -445,6 +473,7 @@
           <div class="panel panel-default" id="pagination">
             <div class="panel-heading">Pagination
             </div>
+            <div class="panel-body">
             <ul class="pagination" style="margin-right: 10px;">
               <li>
                 <a href="#">Prev</a>
@@ -465,7 +494,7 @@
                 <a href="#">Next</a>
               </li>
             </ul>
-            <ul class="pagination pagination-large">
+            <ul class="pagination pagination-lg">
               <li>
                 <a href="#">Prev</a>
               </li>
@@ -494,17 +523,21 @@
               </li>
             </ul>
           </div>
+        </div>
           <div class="panel panel-default" id="labels">
             <div class="panel-heading">Labels and Badges
             </div>
-            <h3><span class="label">Default</span><span class="label label-success">Success</span><span class="label label-warning">Warning</span><span class="label label-danger">Danger</span><span class="label label-info">Info</span></h3>
+            <div class="panel-body">
+            <h3><span class="label label-default">Default</span><span class="label label-success">Success</span><span class="label label-warning">Warning</span><span class="label label-danger">Danger</span><span class="label label-info">Info</span></h3>
             <p class="lead"><a href="#">Inbox <span class="badge">42</span></a></p>
+            </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="panel panel-default" id="alerts">
             <div class="panel-heading">Alerts
             </div>
+            <div class="panel-body">
             <div>
               <div class="alert alert-danger">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -522,11 +555,12 @@
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
               </div>
-              <div class="alert alert-block">
+              <div class="alert">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <h4>Warning!</h4>
                 <p>This is a block style alert.</p>
               </div>
+            </div>
             </div>
           </div>
         </div>
@@ -536,6 +570,7 @@
           <div class="panel panel-default" id="progress">
             <div class="panel-heading">Progress Bars
             </div>
+            <div class="panel-body">
             <div class="progress">
               <div class="progress-bar progress-bar-info" style="width: 20%"></div>
             </div>
@@ -548,12 +583,14 @@
             <div class="progress">
               <div class="progress-bar progress-bar-danger" style="width: 80%"></div>
             </div>
+            </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="panel panel-default" id="media-object">
             <div class="panel-heading">Media Object
             </div>
+            <div class="panel-body">
             <p></p>
             <div class="media">
               <a class="pull-left" href="#">    <img class="media-object" src="https://app.divshot.com/img/placeholder-64x64.gif">  </a>
@@ -569,31 +606,28 @@
                 </div>
               </div>
             </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="panel panel-default" id="list-groups">
-        <div class="panel-heading">List Groups
+      <div class="row">
+        <div class="col-lg-4">
+          <ul class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+          </ul>
         </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <ul class="list-group">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Morbi leo risus</li>
-              <li class="list-group-item">Porta ac consectetur ac</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
+        <div class="col-lg-4">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">          Cras justo odio        </a><a href="#" class="list-group-item">Dapibus ac facilisis in        </a><a href="#" class="list-group-item">Morbi leo risus        </a><a href="#" class="list-group-item">Porta ac consectetur ac        </a><a href="#" class="list-group-item">Vestibulum at eros        </a>
           </div>
-          <div class="col-lg-4">
-            <div class="list-group">
-              <a href="#" class="list-group-item active">          Cras justo odio        </a><a href="#" class="list-group-item">Dapibus ac facilisis in        </a><a href="#" class="list-group-item">Morbi leo risus        </a><a href="#" class="list-group-item">Porta ac consectetur ac        </a><a href="#" class="list-group-item">Vestibulum at eros        </a>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="list-group">
-              <a href="#" class="list-group-item active">          <h4 class="list-group-item-heading">List group item heading</h4>          <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>        </a><a href="#" class="list-group-item">          <h4 class="list-group-item-heading">List group item heading</h4>          <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>        </a><a href="#" class="list-group-item">          <h4 class="list-group-item-heading">List group item heading</h4>          <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>        </a>
-            </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">          <h4 class="list-group-item-heading">List group item heading</h4>          <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>        </a><a href="#" class="list-group-item">          <h4 class="list-group-item-heading">List group item heading</h4>          <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>        </a><a href="#" class="list-group-item">          <h4 class="list-group-item-heading">List group item heading</h4>          <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>        </a>
           </div>
         </div>
       </div>
@@ -602,7 +636,7 @@
           <div class="panel panel-primary" id="panels">
             <div class="panel-heading">This is a header
             </div>
-            <p>This is a panel</p>
+            <p class="panel-body">This is a panel</p>
             <div class="panel-footer">This is a footer
             </div>
           </div>
@@ -611,7 +645,7 @@
           <div class="panel panel-success">
             <div class="panel-heading">This is a header
             </div>
-            <p>This is a panel</p>
+            <div class="panel-body">This is a panel</div>
             <div class="panel-footer">This is a footer
             </div>
           </div>
@@ -620,7 +654,7 @@
           <div class="panel panel-danger">
             <div class="panel-heading">This is a header
             </div>
-            <p>This is a panel</p>
+            <div class="panel-body">This is a panel</div>
             <div class="panel-footer">This is a footer
             </div>
           </div>
@@ -629,7 +663,7 @@
           <div class="panel panel-warning">
             <div class="panel-heading">This is a header
             </div>
-            <p>This is a panel</p>
+            <div class="panel-body">This is a panel</div>
             <div class="panel-footer">This is a footer
             </div>
           </div>
@@ -640,7 +674,7 @@
           <div class="panel panel-info">
             <div class="panel-heading">This is a header
             </div>
-            <p>This is a panel</p>
+            <p class="panel-body">This is a panel</p>
             <div class="panel-footer">This is a footer
             </div>
           </div>
@@ -649,7 +683,7 @@
           <div class="panel panel-default">
             <div class="panel-heading">This is a header
             </div>
-            <p>This is a panel</p>
+            <div class="panel-body">This is a panel</div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">First Item</li>
               <li class="list-group-item">Second Item</li>
