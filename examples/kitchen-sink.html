@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="../dist/css/bootstrap.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <style>
       body {
         padding-bottom: 60px;
@@ -16,7 +16,7 @@
   </head>
   
   <body>
-    <div class="navbar navbar-static-top">
+    <div class="navbar navbar-default navbar-static-top">
       <div class="container">
         
         <div class="navbar-header">
@@ -61,9 +61,11 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Source <span class="caret"></span></a>
               <ul class="dropdown-menu">
+                <li class="dropdown-header">CSS Files</li>
                 <li><a href="../dist/css/bootstrap.css">bootstrap.css</a></li>
                 <li><a href="../dist/css/bootstrap.min.css">bootstrap.min.css</a></li>
                 <li class="divider"></li>
+                <li class="dropdown-header">LESS Files</li>
                 <li><a href="../less/variables.less">variables.less</a></li>
                 <li><a href="../less/theme.less">theme.less</a></li>
               </ul>
@@ -79,7 +81,7 @@
       <div class="jumbotron">
         <h1>Themestrap Kitchen Sink</h1>
         <p>A quick preview of everything Bootstrap has to offer.</p>
-        <p><a class="btn btn-primary btn-large">Learn more</a></p>
+        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
       </div>
       <div class="row">
         <div class="col-lg-6">
@@ -291,42 +293,67 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-8">
           <div class="panel panel-default" id="buttons">
             <div class="panel-heading">Buttons
             </div>
             <div class="panel-body">
-            <p><!-- Standard gray button with gradient -->
-              <button type="button" class="btn btn-default">Default</button>
-              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <button type="button" class="btn btn-primary">Primary</button>
-              <!-- Indicates a successful or positive action -->
-              <button type="button" class="btn btn-success">Success</button>
-              <!-- Contextual button for informational alert messages -->
-              <button type="button" class="btn btn-info">Info</button>
-              <!-- Indicates caution should be taken with this action -->
-              <button type="button" class="btn btn-warning">Warning</button>
-              <!-- Indicates a dangerous or potentially negative action -->
-              <button type="button" class="btn btn-danger">Danger</button>
-              <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
-              <button type="button" class="btn btn-link">Link</button></p>
-            <p>
-              <button type="button" class="btn btn-primary btn-lg">Large</button>
-              <button type="button" class="btn btn-primary disabled">Disabled</button>
-              <button type="button" class="btn btn-primary">Default</button>
-              <button type="button" class="btn btn-primary btn-sm">Small</button>
-              <button type="button" class="btn btn-primary btn-xs">Extra Small</button></p>
+              <p>
+                <button type="button" class="btn btn-lg btn-default">Default</button>
+                <button type="button" class="btn btn-lg btn-primary">Primary</button>
+                <button type="button" class="btn btn-lg btn-success">Success</button>
+                <button type="button" class="btn btn-lg btn-info">Info</button>
+                <button type="button" class="btn btn-lg btn-warning">Warning</button>
+                <button type="button" class="btn btn-lg btn-danger">Danger</button>
+                <button type="button" class="btn btn-lg btn-link">Link</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-default">Default</button>
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-link">Link</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-sm btn-default">Default</button>
+                <button type="button" class="btn btn-sm btn-primary">Primary</button>
+                <button type="button" class="btn btn-sm btn-success">Success</button>
+                <button type="button" class="btn btn-sm btn-info">Info</button>
+                <button type="button" class="btn btn-sm btn-warning">Warning</button>
+                <button type="button" class="btn btn-sm btn-danger">Danger</button>
+                <button type="button" class="btn btn-sm btn-link">Link</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-xs btn-default">Default</button>
+                <button type="button" class="btn btn-xs btn-primary">Primary</button>
+                <button type="button" class="btn btn-xs btn-success">Success</button>
+                <button type="button" class="btn btn-xs btn-info">Info</button>
+                <button type="button" class="btn btn-xs btn-warning">Warning</button>
+                <button type="button" class="btn btn-xs btn-danger">Danger</button>
+                <button type="button" class="btn btn-xs btn-link">Link</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star"></span> Glyphicons!</button>
+                <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span></button>
+                <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></button>
+                <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-info-sign"></span></button>
+                <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-flash"></span></button>
+                <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-ban-circle"></span></button>
+                <button type="button" class="btn btn-link"><span class="glyphicon glyphicon-arrow-right"></span></button>
+              </p>
           </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="panel panel-default" id="images">
             <div class="panel-heading">Images
             </div>
             <div class="panel-body">
-            <p><img src="http://placehold.it/120x100" class="img-rounded">
-              <img src="http://placehold.it/120x100" class="img-circle">
-              <img src="http://placehold.it/120x100" class="img-thumbnail"></p>
+            <p><img src="http://placehold.it/100x100" class="img-rounded">
+              <img src="http://placehold.it/100x100" class="img-circle">
+              <img src="http://placehold.it/100x100" class="img-thumbnail"></p>
             </div>
           </div>
         </div>
@@ -571,18 +598,26 @@
             <div class="panel-heading">Progress Bars
             </div>
             <div class="panel-body">
-            <div class="progress">
-              <div class="progress-bar progress-bar-info" style="width: 20%"></div>
-            </div>
-            <div class="progress progress-striped active">
-              <div class="progress-bar progress-bar-success"></div>
-            </div>
-            <div class="progress">
-              <div class="progress-bar progress-bar-warning" style="width: 60%"></div>
-            </div>
-            <div class="progress">
-              <div class="progress-bar progress-bar-danger" style="width: 80%"></div>
-            </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"><span class="sr-only">40% Complete (success)</span></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><span class="sr-only">20% Complete</span></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete (warning)</span></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">80% Complete (danger)</span></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" style="width: 35%"><span class="sr-only">35% Complete (success)</span></div>
+                <div class="progress-bar progress-bar-warning" style="width: 20%"><span class="sr-only">20% Complete (warning)</span></div>
+                <div class="progress-bar progress-bar-danger" style="width: 10%"><span class='sr-only'>10% Complete (danger)</span></div>
+              </div>
             </div>
           </div>
         </div>
