@@ -29,6 +29,10 @@ module.exports = (grunt) ->
         options:
           port: grunt.option('port') || '8000'
           hostname: grunt.option('host') || 'localhost'
+    open:
+      dev:
+        path: 'http://<%= connect.serve.options.host %>:<%= connect.serve.options.port %>/'
+        app: 'Google Chrome'
     copy:
       bootstrap:
         files: [
@@ -37,6 +41,7 @@ module.exports = (grunt) ->
         ]
     clean: ['tmp']
 
+  grunt.loadNpmTasks('grunt-open')
   grunt.loadNpmTasks('grunt-contrib-less')
   grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('grunt-contrib-cssmin')
@@ -46,4 +51,4 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-connect')
 
   grunt.registerTask('default', ['copy', 'less', 'cssmin', 'clean'])
-  grunt.registerTask('serve', ['connect', 'watch'])
+  grunt.registerTask('serve', ['connect', 'open', 'watch'])
