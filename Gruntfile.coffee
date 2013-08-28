@@ -8,6 +8,12 @@ module.exports = (grunt) ->
           paths: ['less', 'tmp', '<%= bowerDirectory %>/bootstrap/less']
         files:
           'dist/css/bootstrap.css': ['less/theme.less']
+    recess:
+      dist:
+        options:
+          compile: true
+        files:
+          'dist/css/bootstrap.css': ['dist/css/bootstrap.css']
     watch:
       less:
         files: ['less/*.less']
@@ -38,6 +44,7 @@ module.exports = (grunt) ->
     clean: ['tmp']
 
   grunt.loadNpmTasks('grunt-contrib-less')
+  grunt.loadNpmTasks('grunt-recess')
   grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('grunt-contrib-cssmin')
   grunt.loadNpmTasks('grunt-contrib-copy')
@@ -45,5 +52,5 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-clean')
   grunt.loadNpmTasks('grunt-contrib-connect')
 
-  grunt.registerTask('default', ['copy', 'less', 'cssmin', 'clean'])
+  grunt.registerTask('default', ['copy', 'less', 'recess', 'cssmin', 'clean'])
   grunt.registerTask('serve', ['connect', 'watch'])
