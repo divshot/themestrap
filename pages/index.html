@@ -3,7 +3,7 @@
 <html>
   
   <head>
-    <title>Themestrap - A Bootstrap 3 Theme</title>
+    <title>{{#if bower.themestrap.name}}{{bower.themestrap.name}}{{else}}{{#if bower.name}}{{bower.name}}{{else}}Themestrap{{/if}}{{/if}} - A Bootstrap 3 Theme</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="dist/css/bootstrap.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -14,10 +14,10 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-lg-6 col-lg-offset-3">
-          <h1 class="page-header">Themestrap <small>(0.3.0)</small></h1>
-          <p class="lead">A theme for <a href="http://www.getbootstrap.com/">Bootstrap 3</a> by <b>AUTHOR_NAME</b></p>
+          <h1 class="page-header">{{#if bower.themestrap.name}}{{bower.themestrap.name}}{{else}}{{#if bower.name}}{{bower.name}}{{else}}Themestrap{{/if}}{{/if}} <small>({{bower.version}})</small></h1>
+          <p class="lead">A theme for <a href="http://www.getbootstrap.com/">Bootstrap 3</a> by <b>{{bower.author}}</b></p>
           <div class="list-group">
-            <a class="list-group-item" href="https://github.com/divshot/themestrap">View on GitHub</a>
+            <a class="list-group-item" href="{{#if bower.themestrap.url}}{{bower.themestrap.url}}{{else}}{{#if bower.homepage}}{{bower.homepage}}{{else}}https://github.com/divshot/themestrap{{/if}}{{/if}}">View on GitHub</a>
             <a class="list-group-item" href="examples/kitchen-sink.html">View "Kitchen Sink" Example</a>
           </div>
           

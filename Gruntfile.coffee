@@ -38,6 +38,7 @@ module.exports = (grunt) ->
     assemble:
       pages:
         options:
+          data: './bower.json',
           flatten: true,
           assets: 'dist'
         files:
