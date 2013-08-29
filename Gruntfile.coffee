@@ -35,6 +35,15 @@ module.exports = (grunt) ->
         options:
           port: grunt.option('port') || '8000'
           hostname: grunt.option('host') || 'localhost'
+    assemble:
+      pages:
+        options:
+          data: './bower.json',
+          flatten: true,
+          assets: 'dist'
+        files:
+          'index.html': ['pages/index.html'],
+          'examples/': ['pages/examples/*.html']
     copy:
       bootstrap:
         files: [
@@ -51,6 +60,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-text-replace')
   grunt.loadNpmTasks('grunt-contrib-clean')
   grunt.loadNpmTasks('grunt-contrib-connect')
+  grunt.loadNpmTasks('assemble')
 
-  grunt.registerTask('default', ['copy', 'less', 'recess', 'cssmin', 'clean'])
+  grunt.registerTask('default', ['copy', 'less', 'recess', 'cssmin', 'assemble', 'clean'])
   grunt.registerTask('serve', ['connect', 'watch'])

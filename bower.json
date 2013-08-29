@@ -1,7 +1,13 @@
 {
-  "name": "bootstrap-theme-themestrap",
-  "version": "0.3.0",
+  "name": "bootstrap-theme-themestrap-sample",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Your Name",
   "main": "dist/bootstrap.css",
+  "themestrap": {
+    "name": "Themestrap Sample",
+    "repo": "https://github.com/divshot/themestrap"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
