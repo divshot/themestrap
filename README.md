@@ -57,8 +57,8 @@ variables will be back in play.
 
 Before you release your theme, you should do a few things:
 
-1. Make sure that you've updated the package name in `bower.json`
-2. Update the `index.html` file with your name, the theme name and GitHub repo info (or change it to suit your needs)
+1. Make sure that you've updated the package name in `bower.json` and filled out your name, the theme name and GitHub repo info
+2. Check the `index.html` file – it is generated using the information you supplied in `bower.json`.  To change it to suit your needs, edit the template `/pages/index.html`.
 3. Update the `README.md` file to be about your theme
 
 Once you've done that, you should push it up to GitHub and consider 
