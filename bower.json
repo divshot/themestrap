@@ -1,11 +1,12 @@
 {
   "name": "bootstrap-theme-themestrap-sample",
   "version": "0.0.1",
-  "author": "Your Name <mail@example.com>",
+  "private": true,
+  "author": "Your Name",
   "main": "dist/bootstrap.css",
   "themestrap": {
     "name": "Themestrap Sample",
-    "url": "https://github.com/divshot/themestrap"
+    "repo": "https://github.com/divshot/themestrap"
   },
   "ignore": [
     "**/.*",
