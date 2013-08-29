@@ -3,7 +3,17 @@
 <html>
   
   <head>
-    <title>Themestrap Theme Kitchen Sink</title>
+    <title>
+      {{#if bower.themestrap.name}}
+        {{bower.themestrap.name}}
+      {{else}}
+        {{#if bower.name}}
+          {{bower.name}}
+        {{else}}
+          Themestrap
+        {{/if}}
+      {{/if}}
+    </title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="../dist/css/bootstrap.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -26,7 +36,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Themestrap</a>
+          <a class="navbar-brand" href="#">
+            {{#if bower.themestrap.name}}
+              {{bower.themestrap.name}}
+            {{else}}
+              {{#if bower.name}}
+                {{bower.name}}
+              {{else}}
+                Themestrap
+              {{/if}}
+            {{/if}}</a>
         </div>
         
         <div class="collapse navbar-collapse header-collapse">
@@ -79,7 +98,17 @@
     </div>
     <div class="container">
       <div class="jumbotron">
-        <h1>Themestrap Kitchen Sink</h1>
+        <h1>
+          {{#if bower.themestrap.name}}
+            {{bower.themestrap.name}}
+          {{else}}
+            {{#if bower.name}}
+              {{bower.name}}
+            {{else}}
+              Themestrap
+            {{/if}}
+          {{/if}}
+          Kitchen Sink</h1>
         <p>A quick preview of everything Bootstrap has to offer.</p>
         <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
       </div>
