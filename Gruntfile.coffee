@@ -42,7 +42,8 @@ module.exports = (grunt) ->
           flatten: true,
           assets: 'dist'
         files:
-          'index.html': ['pages/index.html']
+          'index.html': ['pages/index.html'],
+          'examples/': ['pages/examples/*.html']
     copy:
       bootstrap:
         files: [
