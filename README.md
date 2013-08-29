@@ -57,14 +57,16 @@ variables will be back in play.
 
 Before you release your theme, you should do a few things:
 
-1. Make sure that you've updated the package name in `bower.json`
-2. Update the `index.html` file with your name, the theme name and GitHub repo info (or change it to suit your needs)
+1. Make sure that you've updated the package name in `bower.json` and filled out your name, the theme name and GitHub repo info
+2. Check the `index.html` file – it is generated using the information you supplied in `bower.json`.  To change it to suit your needs, edit the template `/pages/index.html`.
 3. Update the `README.md` file to be about your theme
 
-Once you've done that, you should push it up to GitHub and consider 
-[registering a Bower package](https://github.com/bower/bower#registering-packages). The repository
+Once you've done that, you should push it up to GitHub. The repository
 is already designed to be released directly onto GitHub Pages without an additional intermediary,
 so if you push to the `gh-pages` branch you should have a nice way to show off your theme!
+
+Also consider [registering a Bower package](https://github.com/bower/bower#registering-packages).
+If you do, remove the `"private": true` property from `bower.json`.
 
 ## The Themestrap Gallery
 
