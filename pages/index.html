@@ -24,7 +24,7 @@
           </div>
           
           <div class='panel text-left'>
-            <div class="panel-heading">Installation Instructions</div>
+            <div class="panel-heading"><h2>Installation Instructions</h2></div>
             <div class="panel-body">
               <p>Download the <a href="dist/css/bootstrap.css" download>bootstrap.css</a> or <a href="dist/css/bootstrap.min.css" download>bootstrap.min.css</a> files or install using Bower:</p>
               {{#if bower.private}}
@@ -35,10 +35,19 @@
             </div>
           </div>
           
+          <div class='panel text-left'>
+            <div class="panel-heading"><h2>README</h2></div>
+            <div class="panel-body">
+              {{md "README.md"}}
+            </div>
+          </div>
+          
+          <footer>
           <p><a href="https://twitter.com/share" class="twitter-share-button" data-via="divshot" data-size="large">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
 
           <p class="text-muted" style="margin-top: 100px;"><small>A <a href="https://github.com/divshot/themestrap" target="_blank">Themestrap</a> theme. Copyright &copy; 2013 Divshot, Inc. Some rights reserved.</small></p>
+          </footer>
         </div>
       </div>
     </div>
