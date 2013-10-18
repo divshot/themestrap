@@ -178,12 +178,27 @@
               <p class="text-danger">Danger color paragraph.</p>
               <p class="text-info">Info color paragraph.</p>
               <p class="text-success">Success color paragraph.</p>
-              <p><small>This is text in a <code>small</code> wrapper. <abbr title="No Big Deal">NBD</abbr>, right?</small></p>
+              <p class="text-left">
+                <small>This is text in a <code>small</code> wrapper and paragraph in a <code>text-left</code>. <abbr title="No Big Deal">NBD</abbr>, right?</small>
+              </p>
+              <p class="text-center">
+                <em>This is text in a <code>em</code> wrapper and paragraph in a <code>text-center</code>.</em>
+              </p>
+              <p class="text-right">
+                <strong>This is text in a <code>strong</code> wrapper and paragraph in a <code>text-right</code>.</strong>
+              </p>
               <hr>
-              <address><strong>Twitter, Inc.</strong><br>795 Folsom Ave, Suite 600<br>San Francisco, CA 94107<br><abbr title="Phone">P:</abbr> (123) 456-7890</address>
-              <address class="col-6"><strong>Full Name</strong><br><a href="mailto:#">first.last@example.com</a></address>
+              <address><strong>Twitter, Inc.</strong><br> 795 Folsom Ave, Suite 600<br> San Francisco, CA 94107<br><abbr title="Phone">P:</abbr> (123) 456-7890</address>
+              <address class="col-6"><strong>Full Name</strong><br> <a href="mailto:#">first.last@example.com</a></address>
               <hr>
-              <blockquote>Here's what a blockquote looks like in Bootstrap. <small>Use <code>small</code> to identify the source.</small></blockquote>
+              <blockquote>Here's what a blockquote looks like in Bootstrap.
+                <small>Use <code>small</code> to identify the source.</small>
+              </blockquote>
+              <p>Use <code>.pull-right</code> for a floated, right-aligned blockquote.</p>
+              <blockquote class="pull-right">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+              </blockquote>
               <hr>
               <div class="row">
                 <div class="col-xs-6">
@@ -208,6 +223,15 @@
                     <li>Adds Bullets to Page</li>
                   </ol>
                 </div>
+              </div>
+              <p>Place all list items on a single line with <code>display: inline-block;</code> and some light padding.</p>
+      
+              <div>
+                <ul class="list-inline">
+                  <li>Lorem ipsum</li>
+                  <li>Phasellus iaculis</li>
+                  <li>Nulla volutpat</li>
+                </ul>
               </div>
               <hr>
               <pre>function preFormatting() {  // looks like this;  var something = somethingElse;  return true;}</pre>
@@ -238,19 +262,77 @@
                 <label>
                   <input type="checkbox">Check me out</label>
               </div>
+              <div class="form-group">
+                <label>Select with groups</label>
+                <select class="form-control">
+                  <optgroup label="Group1">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                    <option value="4">Option 4</option>
+                  </optgroup>
+                  <optgroup label="Group 2">
+                    <option value="11">Option 1</option>
+                    <option value="12">Option 2</option>
+                    <option value="13">Option 3</option>
+                    <option value="14">Option 4</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Just select</label>
+                <select class="form-control">
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                  <option value="4">Option 4</option>
+                </select>
+              </div>
+              <select multiple="" class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+      
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                  Option one is this and that—be sure to include why it's great
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  Option two can be something else and selecting it will deselect option one
+                </label>
+              </div>
               <button type="submit" class="btn btn-default">Submit</button>
             </fieldset>
           </form>
           <hr>
           <form class="form-inline">
-            <input type="text" class="form-control" placeholder="Email" style="width: 200px;">&nbsp;&nbsp;
+            <input type="text" class="form-control" placeholder="Email" style="width: 200px;">
             <input type="password" class="form-control" placeholder="Password" style="width: 200px;">
-            &nbsp;&nbsp;
+      
             <div class="checkbox">
-              <label><input type="checkbox">&nbsp; Remember me</label>
+              <label>
+                <input type="checkbox">Remember me</label>
             </div>
-            &nbsp;&nbsp;
             <button type="submit" class="btn btn-default">Sign in</button>
+          </form>
+          <hr>
+          <form>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+            </label>
           </form>
           <hr>
           <form class="form-horizontal">
@@ -279,14 +361,45 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+              <label class="col-lg-2 control-label">Email</label>
+      
               <div class="col-lg-10">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                <p class="form-control-static">email@example.com</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+      
+              <div class="col-lg-10">
+                <input type="password" class="form-control" disabled id="inputPassword" placeholder="Password">
+      
                 <div class="checkbox">
-                  <label><input type="checkbox">Remember me</label>
-                </div><br>
+                  <label>
+                    <input type="checkbox">Remember me</label>
+                </div>
                 <button type="submit" class="btn btn-default">Sign in</button>
               </div>
+            </div>
+          </form>
+          <form>
+            <div class="controls docs-input-sizes">
+              <input class="form-control input-lg" type="text" placeholder=".input-lg">
+              <br>
+              <input type="text" class="form-control" placeholder="Default input">
+              <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+              <input class="form-control input-sm" type="text" placeholder=".input-sm">
+              <br>
+              <select class="form-control input-lg">
+                <option value="">.input-lg</option>
+              </select>
+              <br>
+              <select class="form-control">
+                <option value="">Default select</option>
+              </select>
+              <br>
+              <select class="form-control input-sm">
+                <option value="">.input-sm</option>
+              </select>
             </div>
           </form>
         </div>
@@ -294,7 +407,8 @@
       <div class="row">
         <div class="col-lg-8">
           <div class="panel panel-default" id="buttons">
-            <div class="panel-heading">Buttons</div>
+            <div class="panel-heading">Buttons
+            </div>
             <div class="panel-body">
               <p>
                 <button type="button" class="btn btn-lg btn-default">Default</button>
@@ -341,18 +455,31 @@
                 <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-ban-circle"></span></button>
                 <button type="button" class="btn btn-link"><span class="glyphicon glyphicon-arrow-right"></span></button>
               </p>
-          </div>
+              <p>
+                <button type="button" class="btn btn-lg btn-default disabled">Default</button>
+                <button type="button" class="btn btn-lg btn-primary disabled">Primary</button>
+                <button type="button" class="btn btn-lg btn-success disabled">Success</button>
+                <button type="button" class="btn btn-lg btn-info disabled">Info</button>
+                <button type="button" class="btn btn-lg btn-warning disabled">Warning</button>
+                <button type="button" class="btn btn-lg btn-danger disabled">Danger</button>
+                <button type="button" class="btn btn-lg btn-link disabled">Link</button>
+              </p>
+              <form>
+                <a class="btn btn-default" href="#">Link</a>
+                <button class="btn btn-default" type="submit">Button</button>
+                <input class="btn btn-default" type="button" value="Input">
+                <input class="btn btn-default" type="submit" value="Submit">
+              </form>
+            </div>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="panel panel-default" id="images">
             <div class="panel-heading">Images</div>
             <div class="panel-body">
-              <p>
-                <img src="http://placehold.it/100x100" class="img-rounded">
+              <p><img src="http://placehold.it/100x100" class="img-rounded">
                 <img src="http://placehold.it/100x100" class="img-circle">
-                <img src="http://placehold.it/100x100" class="img-thumbnail">
-              </p>
+                <img src="http://placehold.it/100x100" class="img-thumbnail"></p>
             </div>
           </div>
         </div>
@@ -388,21 +515,149 @@
           <div class="panel panel-default" id="input-groups">
             <div class="panel-heading">Input Groups</div>
             <div class="panel-body">
-              <div class="input-group">
-                <span class="input-group-btn"><button class="btn btn-default" type="button">Go!</button></span>
-                <input type="text" class="form-control" placeholder="Username">
-              </div><br>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="input-group">
+                                  <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">Go!</button>
+                                  </span>
+                    <input type="text" class="form-control">
+                  </div>
+                  <!-- /input-group -->
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                  <div class="input-group">
+                    <input type="text" class="form-control">
+                                  <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">Go!</button>
+                                  </span>
+                  </div>
+                  <!-- /input-group -->
+                </div>
+                <!-- /.col-lg-6 -->
+              </div>
+              <br>      
               <div class="input-group">
                 <input type="text" class="form-control input-lg" placeholder="a large input">
                 <span class="input-group-addon input-large">.00</span>
-              </div><br>
+              </div>
+              <br>      
               <div class="input-group">
                 <input type="text" class="form-control input-sm" placeholder="a small input">
                 <span class="input-group-addon input-large">.00</span>
-              </div><br>
+              </div>
+              <br>      
               <div class="input-group">
                 <span class="input-group-addon">$</span><input type="text" class="form-control">
                 <span class="input-group-addon">.00</span>
+              </div>
+              <br>      
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="input-group">
+                                  <span class="input-group-addon">
+                                    <input type="checkbox">
+                                  </span>
+                    <input type="text" class="form-control">
+                  </div>
+                  <!-- /input-group -->
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                  <div class="input-group">
+                                  <span class="input-group-addon">
+                                    <input type="radio">
+                                  </span>
+                    <input type="text" class="form-control">
+                  </div>
+                  <!-- /input-group -->
+                </div>
+                <!-- /.col-lg-6 -->
+              </div>
+              <br>      
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="input-group">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action
+                        <span class="caret"></span></button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </div>
+                    <!-- /btn-group -->
+                    <input type="text" class="form-control">
+                  </div>
+                  <!-- /input-group -->
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                  <div class="input-group">
+                    <input type="text" class="form-control">      
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action
+                        <span class="caret"></span></button>
+                      <ul class="dropdown-menu pull-right" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </div>
+                    <!-- /btn-group -->
+                  </div>
+                  <!-- /input-group -->
+                </div>
+                <!-- /.col-lg-6 -->
+              </div>
+              <br>      
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="input-group">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-default" tabindex="-1">Action</button>
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </div>
+                    <input type="text" class="form-control">
+                  </div>
+                  <!-- /.input-group -->
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                  <div class="input-group">
+                    <input type="text" class="form-control">      
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-default" tabindex="-1">Action</button>
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu pull-right" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- /.input-group -->
+                </div>
+                <!-- /.col-lg-6 -->
               </div>
             </div>
           </div>
@@ -410,8 +665,423 @@
       </div>
       <div class="row">
         <div class="col-lg-6">
+          <div class="panel panel-default" id="button-groups">
+            <div class="panel-heading">Button groups</div>
+            <div class="panel-body clearfix">
+      
+              <div>
+                <div class="btn-toolbar">
+                  <div class="btn-group btn-group-lg">
+                    <button type="button" class="btn btn-default">Left</button>
+                    <button type="button" class="btn btn-default">Middle</button>
+                    <button type="button" class="btn btn-default">Right</button>
+                  </div>
+                </div>
+                <br>
+      
+                <div class="btn-toolbar">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default">Left</button>
+                    <button type="button" class="btn btn-default">Middle</button>
+                    <button type="button" class="btn btn-default">Right</button>
+                  </div>
+                </div>
+                <br>
+      
+                <div class="btn-toolbar">
+                  <div class="btn-group btn-group-sm">
+                    <button type="button" class="btn btn-default">Left</button>
+                    <button type="button" class="btn btn-default">Middle</button>
+                    <button type="button" class="btn btn-default">Right</button>
+                  </div>
+                </div>
+                <br>
+      
+                <div class="btn-toolbar">
+                  <div class="btn-group btn-group-xs">
+                    <button type="button" class="btn btn-default">Left</button>
+                    <button type="button" class="btn btn-default">Middle</button>
+                    <button type="button" class="btn btn-default">Right</button>
+                  </div>
+                </div>
+                <br>
+      
+                <div>
+                  <div class="btn-toolbar" style="margin: 0;">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default">1</button>
+                      <button type="button" class="btn btn-default">2</button>
+                      <button type="button" class="btn btn-default">3</button>
+                      <button type="button" class="btn btn-default">4</button>
+                    </div>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default">5</button>
+                      <button type="button" class="btn btn-default">6</button>
+                      <button type="button" class="btn btn-default">7</button>
+                    </div>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default">8</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+      
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">1</button>
+                <button type="button" class="btn btn-default">2</button>
+      
+                <div class="btn-group">
+                  <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Dropdown
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupDrop1">
+                    <li><a href="#">Dropdown link</a></li>
+                    <li><a href="#">Dropdown link</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="panel panel-default" id="button-group-vertical">
+            <div class="panel-heading">Vertical variation</div>
+            <div class="panel-body clearfix">
+              <div class="btn-group-vertical">
+                <button type="button" class="btn btn-default">Button</button>
+                <button type="button" class="btn btn-default">Button</button>
+                <div class="btn-group">
+                  <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Dropdown
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop1">
+                    <li><a href="#">Dropdown link</a></li>
+                    <li><a href="#">Dropdown link</a></li>
+                  </ul>
+                </div>
+                <button type="button" class="btn btn-default">Button</button>
+                <button type="button" class="btn btn-default">Button</button>
+                <div class="btn-group">
+                  <button id="btnGroupVerticalDrop2" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Dropdown
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop2">
+                    <li><a href="#">Dropdown link</a></li>
+                    <li><a href="#">Dropdown link</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button id="btnGroupVerticalDrop3" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Dropdown
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop3">
+                    <li><a href="#">Dropdown link</a></li>
+                    <li><a href="#">Dropdown link</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button id="btnGroupVerticalDrop4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Dropdown
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop4">
+                    <li><a href="#">Dropdown link</a></li>
+                    <li><a href="#">Dropdown link</a></li>
+                  </ul>
+                </div>
+              </div>
+              <br>
+              <br>
+      
+              <div>
+                <div class="btn-group btn-group-justified">
+                  <a href="#" class="btn btn-default">Left</a>
+                  <a href="#" class="btn btn-default">Middle</a>
+                  <a href="#" class="btn btn-default">Right</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+      <div class="col-lg-8">
+        <div class="panel panel-default" id="button-dropdowns">
+          <div class="panel-heading">Button dropdowns</div>
+          <div class="panel-body clearfix">
+            <div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Default <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <!-- /btn-group -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Primary <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <!-- /btn-group -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Success <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <!-- /btn-group -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Info <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <!-- /btn-group -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Warning <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <!-- /btn-group -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <!-- /btn-group -->
+            </div>
+            <br>
+      
+            <div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">Default</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <!-- /btn-group -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <!-- /btn-group -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <!-- /btn-group -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <!-- /btn-group -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <!-- /btn-group -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+              <!-- /btn-group -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="panel panel-default" id="button-sizing">
+          <div class="panel-heading">Sizing</div>
+          <div class="panel-body clearfix">
+            <div>
+              <div class="btn-toolbar">
+                <div class="btn-group">
+                  <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+                    Large button <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <!-- /btn-group -->
+              </div>
+              <br>
+              <!-- /btn-toolbar -->
+              <div class="btn-toolbar">
+                <div class="btn-group">
+                  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+                    Small button <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <!-- /btn-group -->
+              </div>
+              <br>
+              <!-- /btn-toolbar -->
+              <div class="btn-toolbar">
+                <div class="btn-group">
+                  <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                    Extra small button <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <!-- /btn-group -->
+              </div>
+              <!-- /btn-toolbar -->
+            </div>
+            <br>
+      
+            <div>
+              <div class="btn-toolbar">
+                <div class="btn-group dropup">
+                  <button type="button" class="btn btn-default">Dropup</button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <!-- /btn-group -->
+                <div class="btn-group dropup">
+                  <button type="button" class="btn btn-primary">Right dropup</button>
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu pull-right" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <!-- /btn-group -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="panel panel-default" id="breadcrumbs">
+            <div class="panel-heading">Breadcrumbs</div>
+            <div class="panel-body clearfix">
+              <div>
+                <ol class="breadcrumb">
+                  <li class="active">Home</li>
+                </ol>
+                <ol class="breadcrumb">
+                  <li><a href="#">Home</a></li>
+                  <li class="active">Library</li>
+                </ol>
+                <ol class="breadcrumb" style="margin-bottom: 5px;">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Library</a></li>
+                  <li class="active">Data</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
           <div class="panel panel-default" id="navs">
-            <div class="panel-heading">Navs</div>
+            <div class="panel-heading">Navs
+            </div>
             <div class="panel-body clearfix">
               <ul class="nav nav-tabs">
                 <li class="active">
@@ -420,8 +1090,21 @@
                 <li>
                   <a href="#">About</a>
                 </li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Dropdown <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
               </ul>
               <p></p>
+      
               <p></p>
               <ul class="nav nav-pills">
                 <li class="active">
@@ -430,8 +1113,21 @@
                 <li>
                   <a href="#">About</a>
                 </li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Dropdown <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
               </ul>
               <p></p>
+      
               <p></p>
               <ul class="nav nav-stacked nav-pills">
                 <li class="active">
@@ -444,28 +1140,16 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6" id="navbar">
+      </div>
+      <div class="row">
+        <div class="col-lg-12" id="navbar">
           <div class="panel panel-default">
-            <div class="panel-heading">Navbar</div>
+            <div class="panel-heading">Navbar
+            </div>
             <div class="panel-body">
-              <div class="navbar navbar-default">
-                <div class="navbar-header">
-                  <a href="#" class="navbar-brand">Your Company</a>
-                </div>
-                <div class="navbar-collapse">
-                  <ul class="nav navbar-nav navbar-right">
-                    <li class="active">
-                      <a href="#">Home</a>
-                    </li>
-                    <li>
-                      <a href="#">About</a>
-                    </li>
-                    <li>
-                      <a href="#">Contact</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+      
+              <p></p>
+      
               <div class="navbar navbar-inverse">
                 <div class="navbar-header">
                   <a href="#" class="navbar-brand">Your Company</a>
@@ -487,9 +1171,65 @@
               <div class="navbar">
                 <div class="collapse navbar-collapse">
                   <a class="btn btn-primary navbar-btn">Navbar Button</a>
+      
                   <p class="navbar-text navbar-right">Navbar Text</p>
                 </div>
               </div>
+              <p></p>
+      
+              <div>
+                <nav class="navbar navbar-default" role="navigation">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Brand</a>
+                  </div>
+      
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="#">Link</a></li>
+                      <li><a href="#">Link</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li><a href="#">Separated link</a></li>
+                          <li><a href="#">One more separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="navbar-form navbar-left" role="search">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                      </div>
+                      <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#">Link</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <p class="navbar-text pull-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
+                  </div>
+                  <!-- /.navbar-collapse -->
+                </nav>
+              </div>
+      
             </div>
           </div>
         </div>
@@ -497,7 +1237,8 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="panel panel-default" id="pagination">
-            <div class="panel-heading">Pagination</div>
+            <div class="panel-heading">Pagination
+            </div>
             <div class="panel-body">
               <ul class="pagination" style="margin-right: 10px;">
                 <li>
@@ -526,13 +1267,13 @@
                 <li>
                   <a href="#">1</a>
                 </li>
-                <li>
+                <li class="disabled">
                   <a href="#">2</a>
                 </li>
                 <li>
                   <a href="#">3</a>
                 </li>
-                <li>
+                <li class="active">
                   <a href="#">4</a>
                 </li>
                 <li>
@@ -547,19 +1288,46 @@
                   <a href="#">Next</a>
                 </li>
               </ul>
+      
+              <div>
+                <ul class="pager">
+                  <li class="previous disabled"><a href="#">← Older</a></li>
+                  <li class="next"><a href="#">Newer →</a></li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="panel panel-default" id="labels">
-            <div class="panel-heading">Labels and Badges</div>
+            <div class="panel-heading">Labels and Badges
+            </div>
             <div class="panel-body">
-              <h3><span class="label label-default">Default</span>&nbsp;<span class="label label-success">Success</span>&nbsp;<span class="label label-warning">Warning</span>&nbsp;<span class="label label-danger">Danger</span>&nbsp;<span class="label label-info">Info</span></h3>
+              <h3>
+                <span class="label label-default">Default</span>&nbsp;<span class="label label-success">Success</span>&nbsp;<span class="label label-warning">Warning</span>&nbsp;<span class="label label-danger">Danger</span>&nbsp;<span class="label label-info">Info</span>
+              </h3>
+      
               <p class="lead"><a href="#">Inbox <span class="badge">42</span></a></p>
+              <ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
+                <li class="active">
+                  <a href="#">
+                    <span class="badge pull-right">42</span>
+                    Home
+                  </a>
+                </li>
+                <li><a href="#">Profile</a></li>
+                <li>
+                  <a href="#">
+                    <span class="badge pull-right">3</span>
+                    Messages
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="panel panel-default" id="alerts">
-            <div class="panel-heading">Alerts</div>
+            <div class="panel-heading">Alerts
+            </div>
             <div class="panel-body">
               <div>
                 <div class="alert alert-danger">
@@ -581,6 +1349,7 @@
                 <div class="alert">
                   <button type="button" class="close" data-dismiss="alert">&times;</button>
                   <h4>Warning!</h4>
+      
                   <p>This is a block style alert.</p>
                 </div>
               </div>
@@ -591,22 +1360,28 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="panel panel-default" id="progress">
-            <div class="panel-heading">Progress Bars</div>
+            <div class="panel-heading">Progress Bars
+            </div>
             <div class="panel-body">
               <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                  <span class="sr-only">60% Complete</span></div>
               </div>
               <div class="progress">
-                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"><span class="sr-only">40% Complete (success)</span></div>
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                  <span class="sr-only">40% Complete (success)</span></div>
               </div>
               <div class="progress">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><span class="sr-only">20% Complete</span></div>
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                  <span class="sr-only">20% Complete</span></div>
               </div>
-              <div class="progress">
-                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete (warning)</span></div>
+              <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                  <span class="sr-only">60% Complete (warning)</span></div>
               </div>
-              <div class="progress">
-                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">80% Complete (danger)</span></div>
+              <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                  <span class="sr-only">80% Complete (danger)</span></div>
               </div>
               <div class="progress">
                 <div class="progress-bar progress-bar-success" style="width: 35%"><span class="sr-only">35% Complete (success)</span></div>
@@ -618,21 +1393,25 @@
         </div>
         <div class="col-lg-6">
           <div class="panel panel-default" id="media-object">
-            <div class="panel-heading">Media Object</div>
+            <div class="panel-heading">Media Object
+            </div>
             <div class="panel-body">
+              <p></p>
+      
               <div class="media">
-                <a class="pull-left" href="#">
-                  <img class="media-object" src="https://app.divshot.com/img/placeholder-64x64.gif">
-                </a>
+                <a class="pull-left" href="#"> <img class="media-object" src="https://app.divshot.com/img/placeholder-64x64.gif"> </a>
+      
                 <div class="media-body">
                   <h4 class="media-heading">Media heading</h4>
+      
                   <p>This is the content for your media.</p>
+      
                   <div class="media">
-                    <a class="pull-left" href="#">
-                      <img class="media-object" src="https://app.divshot.com/img/placeholder-64x64.gif">
-                    </a>
+                    <a class="pull-left" href="#"> <img class="media-object" src="https://app.divshot.com/img/placeholder-64x64.gif"> </a>
+      
                     <div class="media-body">
                       <h4 class="media-heading">Media heading</h4>
+      
                       <p>This is the content for your media.</p>
                     </div>
                   </div>
@@ -644,8 +1423,12 @@
       </div>
       <div class="row">
         <div class="col-lg-4">
-          <ul class="list-group" id="list-groups">
+          <ul class="list-group">
             <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">
+              <span class="badge">14</span>
+              Cras justo odio
+            </li>
             <li class="list-group-item">Dapibus ac facilisis in</li>
             <li class="list-group-item">Morbi leo risus</li>
             <li class="list-group-item">Porta ac consectetur ac</li>
@@ -654,86 +1437,99 @@
         </div>
         <div class="col-lg-4">
           <div class="list-group">
-            <a href="#" class="list-group-item active">Cras justo odio</a>
-            <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-            <a href="#" class="list-group-item">Morbi leo risus</a>
-            <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-            <a href="#" class="list-group-item">Vestibulum at eros</a>
+            <a href="#" class="list-group-item active"><span class="badge">14</span>Cras justo odio
+            </a><a href="#" class="list-group-item"><span class="badge">12</span>Dapibus ac facilisis in
+          </a><a href="#" class="list-group-item">Morbi leo risus </a><a href="#" class="list-group-item">Porta ac consectetur ac </a><a href="#" class="list-group-item">Vestibulum at eros </a>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="list-group">
-            <a href="#" class="list-group-item active">
-              <h4 class="list-group-item-heading">List group item heading</h4>
+            <a href="#" class="list-group-item active"><h4 class="list-group-item-heading">List group item heading</h4>
+      
               <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
+            </a><a href="#" class="list-group-item">
+            <h4 class="list-group-item-heading">List group item heading</h4>
+      
+            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+          </a><a href="#" class="list-group-item"><h4 class="list-group-item-heading">List group item heading</h4>
+      
+            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p></a>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-3">
           <div class="panel panel-primary" id="panels">
-            <div class="panel-heading">This is a header</div>
+            <div class="panel-heading">This is a header
+            </div>
             <p class="panel-body">This is a panel</p>
-            <div class="panel-footer">This is a footer</div>
+      
+            <div class="panel-footer">This is a footer
+            </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="panel panel-success">
-            <div class="panel-heading">This is a header</div>
+            <div class="panel-heading">This is a header
+            </div>
             <div class="panel-body">This is a panel</div>
-            <div class="panel-footer">This is a footer</div>
+            <div class="panel-footer">This is a footer
+            </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="panel panel-danger">
-            <div class="panel-heading">This is a header</div>
+            <div class="panel-heading">This is a header
+            </div>
             <div class="panel-body">This is a panel</div>
-            <div class="panel-footer">This is a footer</div>
+            <div class="panel-footer">This is a footer
+            </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="panel panel-warning">
-            <div class="panel-heading">This is a header</div>
+            <div class="panel-heading">This is a header
+            </div>
             <div class="panel-body">This is a panel</div>
-            <div class="panel-footer">This is a footer</div>
+            <div class="panel-footer">This is a footer
+            </div>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-3">
           <div class="panel panel-info">
-            <div class="panel-heading">This is a header</div>
+            <div class="panel-heading">This is a header
+            </div>
             <p class="panel-body">This is a panel</p>
-            <div class="panel-footer">This is a footer</div>
+      
+            <div class="panel-footer">This is a footer
+            </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="panel panel-default">
-            <div class="panel-heading">This is a header</div>
+            <div class="panel-heading">This is a header
+            </div>
             <div class="panel-body">This is a panel</div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">First Item</li>
               <li class="list-group-item">Second Item</li>
               <li class="list-group-item">Third Item</li>
             </ul>
-            <div class="panel-footer">This is a footer</div>
+            <div class="panel-footer">This is a footer
+            </div>
           </div>
         </div>
         <div class="col-lg-3">
-          <div class="well" id="wells">Default Well</div>
-          <div class="well well-sm">Small Well</div>
+          <div class="well" id="wells">Default Well
+          </div>
+          <div class="well well-sm">Small Well
+          </div>
         </div>
         <div class="col-lg-3">
-          <div class="well well-lg">Large Padding Well</div>
+          <div class="well well-lg">Large Padding Well
+          </div>
         </div>
       </div>
     </div>
