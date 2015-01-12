@@ -3,7 +3,7 @@
 <html>
   
   <head>
-    <title>Themestrap Sample - A Bootstrap 3 Theme</title>
+    <title>BBC News Labs Bootstrap - A Bootstrap 3 Theme</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="dist/css/bootstrap.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -14,89 +14,41 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-lg-6 col-lg-offset-3">
-          <h1 class="page-header"> Themestrap Sample
+          <h1 class="page-header"> BBC News Labs Bootstrap
             <small>(0.0.1)</small>
           </h1>
-          <p class="lead">A theme for <a href="http://www.getbootstrap.com/">Bootstrap 3</a> by <b>Your Name</b></p>
+          <p class="lead">A theme for <a href="http://www.getbootstrap.com/">Bootstrap 3</a> by <b>Iain Collins</b></p>
           <div class="list-group">
             <a class="list-group-item" href="https://github.com/divshot/themestrap">View on GitHub</a>
             <a class="list-group-item" href="examples/kitchen-sink.html">View "Kitchen Sink" Example</a>
           </div>
           
           <div class='panel panel-default text-left'>
-            <div class="panel-heading">
-              <h3>Quick Install</h3>
-            </div>
+            <div class="panel-heading"><h3>Quick Install</h3></div>
             <div class="panel-body">
               <p>Download the <a href="dist/css/bootstrap.css" download>bootstrap.css</a> or <a href="dist/css/bootstrap.min.css" download>bootstrap.min.css</a> files or install using Bower:</p>
               
-                <pre>bower install https://github.com/divshot/themestrap#master</pre>
+                <pre>bower install https://github.com/iaincollins/themestrap#master</pre>
               
             </div>
           </div>
           
           <div class='panel panel-default text-left'>
-            <div class="panel-heading">
-              <h3>README</h3>
-            </div>
+            <div class="panel-heading"><h3>README</h3></div>
             <div class="panel-body">
-
-              <h1>Themestrap</h1>
-
-              <p><strong>Themestrap</strong> is a simple starter kit for constructing Twitter Bootstrap 3+ themes. It provides the skeleton for a simple, maintainable theme that always uses code directly from Bootstrap with as little replacement as possible.</p>
-
-              <h2>Themestrap's Philosophy</h2>
-
-              <ol>
-                <li>A theme should be built <em>on top</em> of the framework, with as little intrusive change as possible.</li>
-                <li>As the framework evolves, a theme should be easily updated to the latest version.</li>
-              </ol>
-              <p>To this end, Themestrap provides you with two simple files to modify: <strong>variables.less</strong> and <strong>theme.less</strong> (both in the <code>less</code> directory). You can tweak any and all of the Bootstrap variables in <strong>variables.less</strong> and support any additional code or classes you'd like in <strong>theme.less</strong>. The compiled theme CSS includes the Bootstrap library and will automatically pick up any overrides from variables.</p>
-
-              <h2>Creating a Theme with Themestrap</h2>
-
-              <p>To create a theme, first start by cloning the Themestrap repository into a directory named for your theme. We recommend a <code>bootstrap-theme-THEME_NAME</code> naming scheme:</p>
-              <pre><code>git clone https://github.com/divshot/themestrap.git bootstrap-theme-THEME_NAME</code></pre>
-              <p>Next, you should open <code>bower.json</code> and change the package name from <code>bootstrap-theme-themestrap</code> to match what you want your theme to be named. Now you're ready to install dependencies using <a href="http://gruntjs.com">Grunt</a> and <a href="https://github.com/bower/bower">Bower</a> (you must have these installed).</p>
-              <pre><code>npm install<br>bower install</code></pre>
-              <p>Now you're ready to go! Simply edit <code>less/variables.less</code> and <code>less/theme.less</code> to your liking. When you're ready, just run <code>grunt</code> and it will compile and minify the distribution for you. You can also run <code>grunt watch</code> to automatically compile as you work.</p>
-
-              <h2>Testing Out Your Theme</h2>
-
-              <p>We've provided a "Bootstrap Kitchen Sink" HTML file at <code>examples/kitchen-sink.html</code> that contains all of the various components in all of their variations. It may not be 100% exhaustive but it should give you a good idea of what your theme will look like at a glance.</p>
-              <p>You can start a development server at <code>http://localhost:8000</code> by running <code>grunt serve</code>. Your theme will automatically compile while the server is running.</p>
-
-              <h2>Deeper Customization</h2>
-
-              <p>In cases where you need to do a more in-depth overhaul of a portion of Bootstrap's LESS, you may do so by simply copying over a file from Bootstrap's <code>less</code> directory into your theme's <code>less</code> directory and then modifying it as necessary. Example:</p>
-              <pre><code>cp bower_components/bootstrap/less/alerts.less less/alerts.less</code></pre>
-              <p>Because it takes path priority over the Bower-installed Bootstrap LESS, it will automatically override the Bootstrap default. In fact, this is how <code>variables.less</code> works already...delete it and the default Bootstrap variables will be back in play.</p>
-
-              <h2>Releasing Your Theme</h2>
-
-              <p>Before you release your theme, you should do a few things:</p>
-              <ol>
-                <li>Make sure that you've updated the package name in <code>bower.json</code> and filled out your name, the theme name and GitHub repo info</li>
-                <li>Check the <code>index.html</code> file – it is generated using the information you supplied in <code>bower.json</code>. To change it to suit your needs, edit the template <code>/pages/index.html</code>.</li>
-                <li>Update the <code>README.md</code> file to be about your theme</li>
-              </ol>
-              <p>Once you've done that, you should push it up to GitHub. The repository is already designed to be released directly onto GitHub Pages without an additional intermediary, so if you push to the <code>gh-pages</code> branch you should have a nice way to show off your theme!</p>
-              <p>Also consider <a href="https://github.com/bower/bower#registering-packages">registering a Bower package</a>. If you do, remove the <code>"private": true</code> property from <code>bower.json</code>.</p>
-
-              <h2>The Themestrap Gallery</h2>
-
-              <p>We've created a <a href="http://code.divshot.com/themestrap">gallery of themes built with Themestrap</a>. If you have created a theme and want to add it to the gallery, just make a pull request to the <a href="https://github.com/divshot/themestrap/tree/gh-pages">gh-pages</a> branch of this repository.</p>
-
-              <h2>Copyright and License</h2>
-
-              <p>Copyright 2013 Divshot, Inc. under <a href="LICENSE">the Apache 2.0 license</a>.</p>
+              <h1 id="bbc-news-labs-bootstrap-theme">BBC News Labs Bootstrap Theme</h1>
+<p>This is a BBC News Labs theme for Bootstrap, loosely based on the style of the beta version of the new BBC News responsive site.</p>
+<p>This gives us a single theme we can use across BBC News Labs experiments to quickly build prototypes with a unifed apperance.</p>
+<p>Created with Themestrap (see themestrap-README.md)</p>
 
             </div>
           </div>
           
           <footer>
-            <p><a href="https://twitter.com/share" class="twitter-share-button" data-via="divshot" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
-            <p class="text-muted" style="margin-top: 100px;"><small>A <a href="https://github.com/divshot/themestrap" target="_blank">Themestrap</a> theme. Copyright &copy; 2013 Divshot, Inc. Some rights reserved.</small></p>
+          <p><a href="https://twitter.com/share" class="twitter-share-button" data-via="divshot" data-size="large">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+
+          <p class="text-muted" style="margin-top: 100px;"><small>A <a href="https://github.com/divshot/themestrap" target="_blank">Themestrap</a> theme. Copyright &copy; 2013 Divshot, Inc. Some rights reserved.</small></p>
           </footer>
         </div>
       </div>
